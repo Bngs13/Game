@@ -101,6 +101,33 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/p0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-10"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/p1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+5"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/p2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="-20" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -135,9 +162,11 @@
                 android:background="#26A69A"
                 android:visibility="visible" />
 
-            <TableRow
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="bottom|left"
+                android:orientation="horizontal">
 
                 <android.support.design.widget.FloatingActionButton
                     android:id="@+id/pause"
@@ -156,9 +185,28 @@
                     android:clickable="true"
                     app:backgroundTint="#00E676"
                     app:srcCompat="@android:drawable/ic_media_play" />
-            </TableRow>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/onsound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:src="@android:drawable/ic_lock_silent_mode_off"
+                    app:backgroundTint="@android:color/holo_blue_dark" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/offsound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:src="@android:drawable/ic_lock_silent_mode"
+                    app:backgroundTint="@android:color/holo_blue_dark" />
+            </LinearLayout>
 
         </LinearLayout>
+
     </RelativeLayout>
 
 </FrameLayout>
